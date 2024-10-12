@@ -1,0 +1,53 @@
+'use client';
+
+import { useState } from "react";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Menu, Wallet2 } from "lucide-react";
+import { Avatar } from "./ui/avatar";
+import WalletBtn from "./walletBtn";
+export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    return (
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-10">
+            <div className="container flex h-14 items-center justify-between">
+                <div className="flex items-center space-x-4">
+                    <Link className="flex items-center space-x-2" href="/">
+                        {/* <img src="/placeholder.svg?height=32&width=32" alt="Logo" className="h-8 w-8" />
+                         */}
+                        <span className="font-bold hidden sm:inline-block">AdChain</span>
+                    </Link>
+                </div>
+                <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <Link href="/">Home</Link>
+                    <Link href="/create-ad-space">Create Ad Space</Link>
+                    <Link href="/place-ad">Place Ad</Link>
+                    <Link href="/view-ads">View Ads</Link>
+                    <Link href="/my-nfts">My NFTs</Link>
+                    <Link href="/contact">Contact</Link>
+                </nav>
+                <div className="flex items-center space-x-4">
+                    <WalletBtn/>
+                    <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <Menu className="h-6 w-6" />
+                    </Button>
+                </div>
+            </div>
+            {isMenuOpen && (
+                <nav className="md:hidden p-4 border-t bg-background">
+                    <div className="flex flex-col space-y-4">
+                        <Link href="/" className="text-sm font-medium text-center">Home</Link>
+                        <Link href="/create-ad-space" className="text-sm font-medium text-center">Create Ad Space</Link>
+                        <Link href="/place-ad" className="text-sm font-medium text-center">Place Ad</Link>
+                        <Link href="/view-ads" className="text-sm font-medium text-center">View Ads</Link>
+                        <Link href="/my-nfts" className="text-sm font-medium text-center">My NFTs</Link>
+                        <Link href="/contact" className="text-sm font-medium text-center">Contact</Link>
+                        <Button variant="outline" className="w-full">
+                            <WalletBtn/>
+                        </Button>
+                    </div>
+                </nav>
+            )}
+        </header>
+    )
+}
