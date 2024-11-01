@@ -3,14 +3,13 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Wallet, PlusCircle, FileImage, BarChart3, ArrowRight, Menu, Wallet2, WalletIcon } from "lucide-react"
+import { Wallet, PlusCircle, FileImage, BarChart3, ArrowRight, Menu, Wallet2, WalletIcon, Unlink, BarChart4, DollarSign, Users } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-purple-500 to-blue-500">
           <div className="container px-4 md:px-6">
@@ -30,6 +29,37 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* New Hero Section for USPs */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-blue-500 to-purple-500 overflow-hidden">
+          <div className="container px-4 md:px-6 relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+              {[
+                { title: "Breaks Monopoly of Big Tech", icon: <Unlink className="h-12 w-12 mb-4 text-white" />, description: "Decentralize the ad industry" },
+                { title: "No More Twisted Analytics", icon: <BarChart4 className="h-12 w-12 mb-4 text-white" />, description: "Transparent and accurate data" },
+                { title: "Right Prices", icon: <DollarSign className="h-12 w-12 mb-4 text-white" />, description: "Fair market value for ad spaces" },
+                { title: "No Mediation", icon: <Users className="h-12 w-12 mb-4 text-white" />, description: "Direct buyer-seller interaction" },
+              ].map((usp, index) => (
+                <Card key={index} className="bg-white/10 backdrop-blur-lg border-none text-white p-6 transform transition-all duration-300 hover:scale-105 hover:bg-white/20">
+                  <CardContent className="flex flex-col items-center text-center">
+                    <div className="mb-4 rounded-full bg-white/20 p-3 animate-pulse">
+                      {usp.icon}
+                    </div>
+                    <CardTitle className="mb-2">{usp.title}</CardTitle>
+                    <p className="text-sm">{usp.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            {/* Background Animation */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute -inset-[100%] animate-[spin_60s_linear_infinite] opacity-20">
+                <div className="w-full h-full bg-gradient-to-r from-yellow-500 via-purple-500 to-pink-500 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">Key Features</h2>

@@ -26,7 +26,7 @@ contract SubscriptionAdExchange is ERC721URIStorage, Ownable {
     event AdSpaceReverted(uint256 tokenId, address seller);
 
     // Pass msg.sender to the Ownable constructor
-    constructor() ERC721("SubscriptionAdSpace", "SADS") {
+    constructor() ERC721("SubscriptionAdSpace", "SADS") Ownable(msg.sender) {
         tokenCounter = 0;
     }
 

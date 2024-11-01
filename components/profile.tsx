@@ -153,7 +153,7 @@ export function ProfileComponent() {
                       <span>{adSpace.name}</span>
                       <span className="flex items-center text-green-600">
                         <DollarSign className="w-4 h-4 mr-1" />
-                        {adSpace.price} ETH
+                        {adSpace.price} PYUSD
                       </span>
                     </div>
                   ))}
@@ -171,7 +171,7 @@ export function ProfileComponent() {
                       <span>{adSpace.name}</span>
                       <span className="flex items-center text-blue-600">
                         <ShoppingBag className="w-4 h-4 mr-1" />
-                        {adSpace.price} ETH
+                        {adSpace.price} PYUSD
                       </span>
                     </div>
                   ))}

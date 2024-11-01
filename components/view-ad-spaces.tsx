@@ -91,8 +91,8 @@ export function ViewAdSpacesComponent() {
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="flex items-center mb-2"><DollarSign className="w-4 h-4 mr-2" /> Price: {adSpace.price} ETH</p>
-                        <p className="flex items-center mb-2"><Calendar className="w-4 h-4 mr-2" /> Monthly Fee: {adSpace.monthlyFee} ETH</p>
+                        <p className="flex items-center mb-2"><DollarSign className="w-4 h-4 mr-2" /> Price: {adSpace.price} PYUSD</p>
+                        <p className="flex items-center mb-2"><Calendar className="w-4 h-4 mr-2" /> Monthly Fee: {adSpace.monthlyFee} PYUSD</p>
                         <p className="flex items-center"><User className="w-4 h-4 mr-2" /> Owner: {adSpace.owner}</p>
                       </CardContent>
                     </Card>
@@ -102,8 +102,8 @@ export function ViewAdSpacesComponent() {
                       <DialogTitle>Ad Space #{adSpace.id} Details</DialogTitle>
                     </DialogHeader>
                     <div className="mt-4">
-                      <p className="flex items-center mb-2"><DollarSign className="w-4 h-4 mr-2" /> Price: {adSpace.price} ETH</p>
-                      <p className="flex items-center mb-2"><Calendar className="w-4 h-4 mr-2" /> Monthly Fee: {adSpace.monthlyFee} ETH</p>
+                      <p className="flex items-center mb-2"><DollarSign className="w-4 h-4 mr-2" /> Price: {adSpace.price} PYUSD</p>
+                      <p className="flex items-center mb-2"><Calendar className="w-4 h-4 mr-2" /> Monthly Fee: {adSpace.monthlyFee} PYUSD</p>
                       <p className="flex items-center mb-2"><User className="w-4 h-4 mr-2" /> Owner: {adSpace.owner}</p>
                       <p className="mt-4 mb-4">{adSpace.description}</p>
                       <div className="mb-4">

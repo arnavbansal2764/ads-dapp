@@ -76,7 +76,7 @@ export default function CreateAdSpaceModal() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="price">Price (ETH)</Label>
+            <Label htmlFor="price">Price (PYUSD)</Label>
             <Input
               id="price"
               name="price"
@@ -89,7 +89,7 @@ export default function CreateAdSpaceModal() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="monthlyFee">Monthly Fee (ETH)</Label>
+            <Label htmlFor="monthlyFee">Monthly Fee (PYUSD)</Label>
             <Input
               id="monthlyFee"
               name="monthlyFee"
