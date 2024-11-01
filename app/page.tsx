@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Wallet, PlusCircle, FileImage, BarChart3, ArrowRight, Menu, Wallet2, WalletIcon, Unlink, BarChart4, DollarSign, Users } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-
+import Typewriter  from "typewriter-effect"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -35,7 +35,7 @@ export default function Home() {
           <div className="container px-4 md:px-6 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {[
-                { title: "Breaks Monopoly of Big Tech", icon: <Unlink className="h-12 w-12 mb-4 text-white" />, description: "Decentralize the ad industry" },
+                { title: "Breaks Monopoly of Big Ad Marketplaces", icon: <Unlink className="h-12 w-12 mb-4 text-white" />, description: "Decentralize the ad industry" },
                 { title: "No More Twisted Analytics", icon: <BarChart4 className="h-12 w-12 mb-4 text-white" />, description: "Transparent and accurate data" },
                 { title: "Right Prices", icon: <DollarSign className="h-12 w-12 mb-4 text-white" />, description: "Fair market value for ad spaces" },
                 { title: "No Mediation", icon: <Users className="h-12 w-12 mb-4 text-white" />, description: "Direct buyer-seller interaction" },
@@ -46,7 +46,14 @@ export default function Home() {
                       {usp.icon}
                     </div>
                     <CardTitle className="mb-2">{usp.title}</CardTitle>
-                    <p className="text-sm">{usp.description}</p>
+                    <Typewriter
+                      options={{
+                        strings: [usp.description],
+                        autoStart: true,
+                        loop: true,
+                      }}
+                    />
+                   
                   </CardContent>
                 </Card>
               ))}
