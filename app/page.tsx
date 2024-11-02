@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-purple-500 to-blue-500">
+        <section className="w-full md:pt-12 lg:pt-16 xl:pt-24 bg-gradient-to-r from-purple-500 to-blue-500">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -30,8 +30,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* New Hero Section for USPs */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-blue-500 to-purple-500 overflow-hidden">
+      
+        <section className="w-full md:py-24 lg:py-32 bg-gradient-to-r from-purple-500 to-blue-500 overflow-hidden">
           <div className="container px-4 md:px-6 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {[
