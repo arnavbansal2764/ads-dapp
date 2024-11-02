@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ad Space NFT Marketplace
 
-## Getting Started
+Welcome to the Ad Space NFT Marketplace! This decentralized application allows users to mint and list unique ad spaces as NFTs on the blockchain. Built using Next.js, TypeScript, and Ethereum smart contracts, this project showcases the power of blockchain technology in the advertising space.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Mint Ad Space**: Create unique ad spaces by providing metadata and pricing.
+- **Buy Ad Space**: Purchase existing ad spaces listed as NFTs.
+- **IPFS Integration**: Store metadata securely on IPFS.
+- **Blockchain Transactions**: Interact with Ethereum smart contracts to mint and manage NFTs.
+- **Responsive Design**: User-friendly interface that works on various devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js, TypeScript, React
+- **Smart Contracts**: Solidity
+- **Blockchain**: Ethereum
+- **IPFS**: InterPlanetary File System for decentralized storage
+- **Ethers.js**: JavaScript library for interacting with the Ethereum blockchain
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Get Started
 
-## Learn More
+To use the Ad Space NFT Marketplace:
 
-To learn more about Next.js, take a look at the following resources:
+1. Visit our website: [Ad Space NFT Marketplace](https://ads-dapp.vercel.app/).
+2. Connect your MetaMask wallet.
+3. Create a new ad space or browse existing listings to purchase an ad space.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Loading Messages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+During the minting process, users will see loading messages such as:
+- Preparing your details for IPFS...
+- Uploading metadata to IPFS...
+- Generating your unique NFT...
+- Creating your ad space...
+- Finalizing your transaction...
+- Minting your NFT...
+- Securing your NFT on the blockchain...
+- Processing your payment...
+- Verifying transaction details...
+- Awaiting confirmation from the network...
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! If you have suggestions for improvements or features, feel free to create a pull request or open an issue.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
