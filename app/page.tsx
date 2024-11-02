@@ -77,7 +77,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { title: "Decentralized Ad Placement", icon: <PlusCircle className="h-6 w-6" />, description: "Place ads on a decentralized network" },
-                { title: "Pay with Cryptocurrency", icon: <Wallet className="h-6 w-6" />, description: "Use crypto for seamless transactions" },
+                { title: "Fast and Secure Payments", icon: <Wallet className="h-6 w-6" />, description: "Leveraging PYUSD cryptocurrency for seamless transactions" },
                 { title: "NFT-based IP Protection", icon: <FileImage className="h-6 w-6" />, description: "Secure your ad content as NFTs" },
                 { title: "Real-Time Analytics", icon: <BarChart3 className="h-6 w-6" />, description: "Track performance in real-time" },
               ].map((feature, index) => (
