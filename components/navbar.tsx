@@ -5,8 +5,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, Wallet2 } from "lucide-react";
 import { Avatar } from "./ui/avatar";
-import WalletBtn from "./walletBtn";
 import useCreateAdSpace from "@/hooks/useCreateAdSpace";
+import ConnectWalletButton from "./connect-wallet";
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const createAdSpace = useCreateAdSpace();
@@ -17,7 +17,8 @@ export default function Navbar() {
                     <Link className="flex items-center space-x-2" href="/">
                         {/* <img src="/placeholder.svg?height=32&width=32" alt="Logo" className="h-8 w-8" />
                          */}
-                        <span className="font-bold hidden sm:inline-block">AdChain</span>
+                        <span className="font-bold hidden sm:inline-block text-2xl">AdChain</span>
+                        <span className="hidden sm:inline-block pt-1">Powered By QuickNode</span>
                     </Link>
                 </div>
                 <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -29,7 +30,8 @@ export default function Navbar() {
                     <Link href="/about-us">About Us</Link>
                 </nav>
                 <div className="flex items-center space-x-4">
-                    <WalletBtn/>
+                    {/* <WalletBtn/> */}
+                    <ConnectWalletButton/>
                     <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         <Menu className="h-6 w-6" />
                     </Button>
@@ -44,7 +46,7 @@ export default function Navbar() {
                         <Link href="/my-nfts" className="text-sm font-medium text-center">My NFTs</Link>
                         <Link href="/profile" className="text-sm font-medium text-center">Profile</Link>
                         <Button variant="outline" className="w-full">
-                            <WalletBtn/>
+                            {/* <WalletBtn/> */}
                         </Button>
                     </div>
                 </nav>
