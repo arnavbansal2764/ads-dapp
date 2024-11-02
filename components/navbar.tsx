@@ -26,6 +26,7 @@ export default function Navbar() {
                     <Link href="/view-ads">View Ads</Link>
                     <Link href="/my-nfts">My NFTs</Link>
                     <Link href="/profile">Profile</Link>
+                    <Link href="/about-us">About Us</Link>
                 </nav>
                 <div className="flex items-center space-x-4">
                     <WalletBtn/>

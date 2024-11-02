@@ -7,7 +7,11 @@ import { Wallet, PlusCircle, FileImage, BarChart3, ArrowRight, Menu, Wallet2, Wa
 import Link from "next/link"
 import { useState } from "react"
 import Typewriter  from "typewriter-effect"
+import useCreateAdSpace from "@/hooks/useCreateAdSpace"
+import { useRouter } from "next/navigation"
 export default function Home() {
+  const createAdSpace = useCreateAdSpace();
+  const router = useRouter();
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
@@ -23,8 +27,8 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button variant="secondary">Get Started</Button>
-                <Button variant="outline" className="bg-white text-purple-500">Learn More</Button>
+                <Button variant="secondary" onClick={()=>{createAdSpace.onOpen()}}>Get Started</Button>
+                <Button variant="outline" className="bg-white text-purple-500" onClick={()=>router.push("/about-us")}>Learn More</Button>
               </div>
             </div>
           </div>
