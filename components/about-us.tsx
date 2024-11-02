@@ -20,7 +20,7 @@ export function AboutUsComponent() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            About SubscriptionAdExchange
+            About AdChain
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl mb-8"
